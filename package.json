@@ -1,6 +1,6 @@
 {
   "name": "array.unflat",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "exports": "./dist/index.js",
   "type": "module",
