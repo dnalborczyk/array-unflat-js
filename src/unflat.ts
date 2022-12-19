@@ -5,13 +5,17 @@ export default function unflat<T, U = undefined>(
   value: readonly T[],
   size = 2,
   fill?: U,
-): (T | U)[][] {
+): T[] | (T | U)[][] {
   if (!isArray(value)) {
-    throw new Error(`value parameter must be an array.`)
+    throw new Error(`value must be an array.`)
   }
 
-  if (typeof size !== 'number' || size < 1) {
-    throw new Error(`size parameter must be a positive number.`)
+  if (typeof size !== 'number') {
+    throw new Error(`size must be a number.`)
+  }
+
+  if (size < 1) {
+    return value as T[]
   }
 
   const unflattened: (T | U)[][] = []
