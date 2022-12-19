@@ -41,5 +41,5 @@ jobs:
 
       - run: npm test
 
-      - if: matrix.node-version != '14'
+      - if: matrix.node-version != '14' && matrix.os != 'windows-latest'
         run: npm run test:cov
