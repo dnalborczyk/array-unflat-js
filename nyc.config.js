@@ -1,6 +1,4 @@
-'use strict'
-
-module.exports = {
+export default {
   all: true,
   'check-coverage': true,
   exclude: ['src/__tests__/**/*.*'],
